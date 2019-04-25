@@ -17,7 +17,11 @@ spec:
           containerPort: 3306
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: welcome
+#          value: welcome
+          valueFrom:
+            secretKeyRef:
+              name: blog-secrets
+              key: db-password
 ---
 apiVersion: v1
 kind: Service

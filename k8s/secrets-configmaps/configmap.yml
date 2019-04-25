@@ -3,4 +3,5 @@ kind: ConfigMap
 metadata:
   name: blog-config
 data:
-  dbhost: db-svc
+  dbuser: root
+  dbc: mysql
